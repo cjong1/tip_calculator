@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
         var billAmount = NSString(string: billField.text).doubleValue
-        var tip = billAmount * tipPercentage
+        var tip = billAmount * tipPercentage/Double(groupSize)
         var total = (billAmount + tip)/Double(groupSize)
         
         tipLabel.text = "$\(tip)"
